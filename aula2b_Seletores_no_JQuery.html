@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seletores no JQuery</title>
+  <!---JQuery---->
+  <script src="jquery-3.6.3.js"></script>
+  <!---JS-->
+  <script>
+    //três maneiras de selecionar : tag, id, class.
+
+    
+            //Ao carregar documento
+            //quando o documento tiver pronto algo vai acontecer , a função
+            $(document).ready(function(){
+               
+                    //variáveis
+              //pega o valor dentro da tag "input".
+              var campo = $("input").val();
+
+              //pega o html "texto", dentro da classe "titulo".
+              var titulo = $("#titulo").html();
+
+              //pega o html "texto", dentro do id "subTitulo".
+              var subtitulo = $(".subTitulo").html();
+
+                  //exibir
+                  alert(campo);
+                  alert(titulo);
+                  alert(subtitulo);
+
+            });
+
+
+  </script>
+</head>
+<body>
+  
+  <input type="text" value="Campo Nome">
+
+  <h1 id="titulo">Titulo em h1</h1>
+
+  <h2 class="subTitulo">Titulo em h2</h2>
+
+
+</body>
+</html>
