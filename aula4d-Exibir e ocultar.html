@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exibir e Ocultar</title>
+  <!---JQuery---->
+  <script src="jquery-3.6.3.js"></script>
+  <!---JS-->
+  <script>
+    //Para exibir e não exibir uma imagem.
+
+    
+            //Ao carregar documento
+            //quando o documento tiver pronto algo vai acontecer , a função
+            $(document).ready(function(){
+               
+              //Função => Exibir a imagem
+              // Executa a funçao no id "exibir"
+              $("#exibir").click(function(){
+
+                    //mostra, o que tem na tag "img".
+                    $("img").show();
+
+              });
+              
+
+              //Função => Ocultar a imagem.
+              //Executa a função, no id "ocultar".
+              $("#ocultar").click(function(){
+
+                  //esconde, o que tem na tag "img"
+                  $("img").hide();
+
+              });
+              
+            });
+
+
+  </script>
+</head>
+<body>
+  <!--botão que vai aparecer na página-->
+  <button id="exibir">Exibir</button>
+
+  <!--botão que vai aparecer na página-->
+  <button id="ocultar">Ocultar</button>
+
+  <br>
+
+  <!--imagem que vai aparecer na página-->
+  <img src="logo_proway.png" width="450" height="250" alt="logon">
+
+</body>
+</html>

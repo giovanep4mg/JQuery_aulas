@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos no JQuery</title>
+  <!---JQuery---->
+  <script src="jquery-3.6.3.js"></script>
+  <!---JS-->
+  <script>
+    //O conceito de eventos é o mesmo para os outros.
+
+    
+            //Ao carregar documento
+            //quando o documento tiver pronto algo vai acontecer , a função
+            $(document).ready(function(){
+               
+                //Evento de clique = já é a função
+                $("button").click(function(){
+
+                  //adicionar um texto no h1 = ação que irá acontecer
+                  $("h1").html("Você clicou no botão!");
+
+                });
+              
+            });
+
+
+  </script>
+</head>
+<body>
+  
+  <h1></h1>
+
+  <button>Clique aqui</button>
+
+</body>
+</html>

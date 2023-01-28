@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fade</title>
+  <!---JQuery---->
+  <script src="jquery-3.6.3.js"></script>
+  <!---JS-->
+  <script>
+    //Fade, é efeito para exibir ou ocultar uma imagem, texto...
+
+    
+      //Ao carregar documento
+      //quando o documento tiver pronto algo vai acontecer , a função
+      $(document).ready(function(){
+               
+        
+        /*
+        pega tag "h1", e aplicar esse comando CSS,
+        que não vai mostra o que tem dentro da tag.
+        */
+        $("h1").css("display","none");
+
+            //Função => Exibir o h1.
+            //executar essa função.
+            $("#exibir").click(function(){
+
+                //mostrar o que tem na tag "h1".       
+                  $("h1").fadeIn();
+
+            });
+
+            //Função = Ocultar o h1.
+            //Executa essa função.
+            $("#ocultar").click(function(){
+
+              //Não mostrar o que tem na tag "h1".
+                $("h1").fadeOut();
+
+            })
+
+              /*
+              Tempo (que irá controla a transição)
+              1° Default 0,4s > já é o padrão.
+              2° Slow 0,6s > vai deixar mais devagar.
+              3° Valor 3000 = 3s >voc^pode colocar o valor dentro da "()".
+              */
+
+              });
+            
+              
+
+  </script>
+</head>
+<body>
+  <!--EVENTOS QUE VÃO ACONTECER NA PÁGINA---->
+
+  <!--vai aparecer esse botão na página--->
+  <button id="exibir">Exibir</button>
+
+  <!--botão que vai aparecer na página-->
+  <button id="ocultar">Ocultar</button>
+
+  <!--Pula linha,vai traçar uma linha na página-->
+  <hr>
+
+  <!--botão que vai aparecer na página-->
+  <h1>Aprendedo JS</h1>
+
+</body>
+</html>
