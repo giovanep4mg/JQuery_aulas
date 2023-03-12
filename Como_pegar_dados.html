@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como pega dados</title>
+      <!--JS-->
+      <script>
+          //variáveis vazias para receber os dados 
+          var nome = "";
+          var idade = "";
+
+      //funcao 
+      function pegarDados() {
+
+        //pega o valor, dentro do "id = nome ", e salva na var "nome"
+        nome = document.getElementById("nome").value;
+
+        //retorna para o html, o valor dentro da variável "nome" 
+        document.getElementById("valorDigitadoNome").innerHTML = nome;
+
+        //pega o valor, dentro do "id = idade ", e salva na var "idade"
+        idade = document.getElementById("idade").value;
+
+        //retorna para o html, o valor dentro da variável "idade"
+        document.getElementById("valorDigitadoIdade").innerHTML = idade;
+
+        
+      }
+
+            //funcao Cnh
+            function Cnh(){
+             
+              if(idade >= 18){
+                document.getElementById("cnh").innerHTML = "Sim";
+              } else {
+                document.getElementById("cnh").innerHTML = "Não";
+                //retorna "Não", mas com as letras em red, 
+                document.getElementById("cnh").style="color: red ";
+              }
+
+            }
+      </script>
+  </head>
+  <body>
+    <main>
+      <header><h1>Pegar dados, verificar e dá respostas</h1></header>
+      <section style="background-color: rgba(18, 132, 94, 0.379); border-style: dashed; text-anchor: start; margin: 10px; width: 500px;">
+        <div style="margin: 10px; text-decoration: underline;" >
+          <h2>Digite seu nome</h2>
+          <input type="text" id="nome" />
+          <br />
+          <h2>Digite sua idade</h2>
+          <input type="number" id="idade" />
+          <br />
+          <br />
+          <input type="submit" onclick="pegarDados(), Cnh()"    value="Enviar dados" />
+          <br />
+        </div>
+      </section>
+    <br />
+    <section style="background-color: rgba(223, 87, 189, 0.397); border-style: dotted; text-anchor: start; margin: 10px; width: 500px;">
+        <h2>
+            Seu nome é :
+            <p id="valorDigitadoNome" style="color: blue"></p>
+        </h2>
+        <h2>
+            Sua idade é :
+            <p id="valorDigitadoIdade" style="color: blue"></p>
+        </h2>
+        <h2>
+            Você pode ou não tirar cnh:
+            <p id="cnh" style="color: blue;"></p>
+        </h2>
+    </section>
+  </main>
+</body>
+</html>
