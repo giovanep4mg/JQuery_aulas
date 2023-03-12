@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alterar atributos</title>
+  <!---JQuery---->
+  <script src="jquery-3.6.3.js"></script>
+  <!---JS-->
+  <script>
+    //pega um atributo e faz a transformação.
+
+    
+      //Ao carregar documento
+      //quando o documento tiver pronto algo vai acontecer , a função
+      $(document).ready(function(){
+               
+      
+            //quando clicar no botão executa essa função
+            //pega a tag "img", e modifica ela com esses novos parametros.
+            $("img").attr("width", "600");
+
+            //pega a tag "img", e modifica ela = passando o titulo para a foto, o "alt" dela.
+            $("img").attr("title", "Aterando o atributo via JQuery");
+            
+      });
+            
+              
+
+  </script>
+</head>
+<body>
+          <!--EVENTOS QUE VÃO ACONTECER NA PÁGINA---->
+        
+        <!--Imagem que  será exibido na tela -->  
+        <img src="logo_proway.png">
+
+</body>
+</html>
